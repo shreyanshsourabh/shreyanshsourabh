@@ -1,8 +1,6 @@
 - 👋 Hi, I’m @shreyanshsourabh
-- 👀 I’m interested in Data
-- 🌱 I’m currently learning Machine Learning
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+- 🌱 I’m currently working at Wabtec Corporation as an Intern
+- 📫 mail me @shreyanshsourabh99@gmail.com
 
 <!---
 shreyanshsourabh/shreyanshsourabh is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
