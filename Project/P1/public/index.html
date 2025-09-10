@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Realtime Docs</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Realtime Docs</h1>
+    <section class="card">
+      <h2>Create a new document</h2>
+      <input id="title" placeholder="Title (optional)" />
+      <button id="createBtn">Create</button>
+    </section>
+
+    <section class="card">
+      <h2>Open an existing document</h2>
+      <input id="docId" placeholder="Paste Document ID" />
+      <button id="openBtn">Open</button>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('createBtn').onclick = async () => {
+      const title = document.getElementById('title').value || 'Untitled';
+      const res = await fetch('/api/docs', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title })
+      });
+      const data = await res.json();
+      location.href = data.url;
+    };
+
+    document.getElementById('openBtn').onclick = () => {
+      const id = document.getElementById('docId').value.trim();
+      if (!id) return alert('Enter a Document ID');
+      location.href = `/doc.html?id=${encodeURIComponent(id)}`;
+    };
+  </script>
+</body>
+</html>

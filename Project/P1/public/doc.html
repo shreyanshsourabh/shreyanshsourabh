@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editing…</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <a href="/">← All docs</a>
+    <div id="status">Connecting…</div>
+  </div>
+
+  <div class="container">
+    <div id="editor" class="editor" contenteditable="true" spellcheck="false"></div>
+    <div class="meta">
+      <div>Doc ID: <code id="docIdView"></code></div>
+      <div>Version: <span id="version">0</span></div>
+      <div>Users here: <span id="userCount">1</span> (approx)</div>
+    </div>
+  </div>
+
+  <script src="/client.js"></script>
+</body>
+</html>
